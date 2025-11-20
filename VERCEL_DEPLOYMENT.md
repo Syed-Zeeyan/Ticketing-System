@@ -38,18 +38,26 @@ To set this:
 
 **Note:** A `vercel.json` file has been added to the root to help with deployment, but setting the Root Directory in Vercel settings is the most reliable method.
 
-### 3. Environment Variables
+### 3. Environment Variables (CRITICAL - REQUIRED FOR LOGIN TO WORK)
+
+**⚠️ IMPORTANT:** You MUST add this environment variable or the login will fail with 500 errors!
 
 Add the following environment variable in Vercel:
 
 - **Variable Name:** `NEXT_PUBLIC_API_URL`
-- **Value:** Your backend API URL (e.g., `https://your-backend-api.com/api` or `http://localhost:8080/api` for local testing)
+- **Value:** Your backend API URL (e.g., `https://your-backend-api.com/api`)
+  - **DO NOT use `http://localhost:8080/api`** - this won't work on Vercel!
+  - Your backend must be accessible from the internet (not localhost)
+  - Example: `https://api.yourdomain.com/api` or your deployed backend URL
 
 **To add environment variables:**
 1. In your Vercel project settings
-2. Go to "Settings" → "Environment Variables"
-3. Add `NEXT_PUBLIC_API_URL` with your backend URL
-4. Make sure to add it for all environments (Production, Preview, Development)
+2. Go to **Settings** → **Environment Variables**
+3. Click **Add New**
+4. Add `NEXT_PUBLIC_API_URL` with your backend URL
+5. **IMPORTANT:** Select all environments (Production, Preview, Development)
+6. Click **Save**
+7. **Redeploy** after adding the variable (or it won't take effect)
 
 ### 4. Deploy
 
