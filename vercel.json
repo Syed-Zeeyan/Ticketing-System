@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd ticketing-frontend && npm install && npm run build",
+  "outputDirectory": "ticketing-frontend/.next",
+  "installCommand": "cd ticketing-frontend && npm install",
+  "framework": null
+}
+
