@@ -17,15 +17,26 @@
 
 ### 2. Configure Project Settings
 
-**Root Directory:** Set to `ticketing-frontend`
+**IMPORTANT:** In Vercel project settings, you MUST set:
 
-**Framework Preset:** Next.js (auto-detected)
+**Root Directory:** `ticketing-frontend`
 
-**Build Command:** `npm run build` (default)
+To set this:
+1. After importing the project, go to **Settings** → **General**
+2. Scroll down to **Root Directory**
+3. Click **Edit**
+4. Select **Other** and enter: `ticketing-frontend`
+5. Click **Save**
+
+**Framework Preset:** Next.js (auto-detected after setting root directory)
+
+**Build Command:** `npm run build` (default, will run in ticketing-frontend directory)
 
 **Output Directory:** `.next` (default)
 
-**Install Command:** `npm install` (default)
+**Install Command:** `npm install` (default, will run in ticketing-frontend directory)
+
+**Note:** A `vercel.json` file has been added to the root to help with deployment, but setting the Root Directory in Vercel settings is the most reliable method.
 
 ### 3. Environment Variables
 
