@@ -1,6 +1,6 @@
 const nextConfig = {
   reactStrictMode: true,
-  output: 'standalone',
+  // Remove 'standalone' output for Vercel - it auto-detects Next.js
   images: {
     domains: [],
   },
