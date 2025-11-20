@@ -1,0 +1,36 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.idea/
+*.log
+uploads/
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Node modules
+node_modules/
+ticketing-frontend/node_modules/
+
+# Build outputs
+.next/
+ticketing-frontend/.next/
+dist/
+ticketing-frontend/dist/
+
+# IDE
+*.swp
+*.swo
+*~
+
+# OS
+Thumbs.db
+.DS_Store
+
